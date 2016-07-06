@@ -98,7 +98,7 @@ public class CoreModule extends AbstractModule
 		bind(LastAggregator.class);
 		bind(SaveAsAggregator.class);
 		bind(TrimAggregator.class);
-
+		bind(WeightedAvgAggregator.class);
 
 		bind(ValueGroupBy.class);
 		bind(TimeGroupBy.class);
@@ -130,7 +130,9 @@ public class CoreModule extends AbstractModule
 
 		bind(StringDataPointFactory.class).in(Singleton.class);
                 
-		bind(StringDataPointFactory.class).in(Singleton.class);
+		bind(ComplexDataPointFactory.class).in(Singleton.class);
+
+		bind(FractionDataPointFactory.class).in(Singleton.class);
 
 		bind(NullDataPointFactory.class).in(Singleton.class);
 
