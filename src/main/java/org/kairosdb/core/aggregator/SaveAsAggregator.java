@@ -68,7 +68,11 @@ public class SaveAsAggregator implements Aggregator
 	{
 		return true;
 	}
-
+       	@Override
+	public String getGroupType(String groupType)
+	{
+	        return groupType;
+	}
 	private class SaveAsDataPointAggregator implements DataPointGroup
 	{
 		private DataPointGroup m_innerDataPointGroup;
